@@ -1,7 +1,6 @@
-import "../styles/globals.scss";
+import { MyApp } from "../src/pages/App.jsx";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import "../src/styles/reset.scss";
+import "../src/styles/globals.scss";
 
 export default MyApp;
