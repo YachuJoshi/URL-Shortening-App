@@ -2,9 +2,16 @@
 
 .NavBar {
   padding: 20px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+  }
 }
 
 .Logo {
@@ -15,6 +22,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
 
 .MenuIcon {
@@ -37,51 +48,76 @@
   @include media-breakpoint-up(md) {
     display: none;
   }
-}
 
-.NavList {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  border-bottom: 1px solid $gray;
-}
+  .NavList {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+  }
 
-.NavItem {
-  font-weight: 500;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  cursor: pointer;
+  .NavItem {
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    cursor: pointer;
+  }
 }
 
 .Buttons {
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  .Login {
+    margin: 32px 0;
+  }
 }
 
-.Login {
-  font-family: inherit;
-  font-weight: 500;
-  margin: 32px 0;
-  color: $white;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.NavigationDesktop {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    margin-right: auto;
+    margin-left: 36px;
+  }
+
+  .NavListDesktop {
+    display: flex;
+  }
+
+  .NavItemDesktop {
+    cursor: pointer;
+    font-weight: 700;
+    color: $grayish-violet;
+    transition: all 0.2s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    &:hover {
+      color: darken($grayish-violet, 32%);
+    }
+  }
 }
 
-.SignUp {
-  background-color: $cyan;
-  font-family: inherit;
-  font-weight: 500;
-  padding: 10px 0;
-  cursor: pointer;
-  color: $white;
-  border: none;
-  width: 100%;
-  border-radius: 100px;
-  transition: all 0.2s ease-out;
+.ButtonsDesktop {
+  display: none;
 
-  &:hover {
-    background-color: darken($cyan, 6%);
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  .LoginDesktop {
+    font-weight: 700;
+    margin-right: 32px;
+    color: $grayish-violet;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      color: darken($grayish-violet, 32%);
+    }
   }
 }

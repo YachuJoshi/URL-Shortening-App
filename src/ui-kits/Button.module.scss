@@ -1,0 +1,27 @@
+@import '../styles/main.scss';
+
+.Button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.ButtonPrimary {
+  background-color: $cyan;
+  padding: 10px 32px;
+  color: $white;
+  border: none;
+  width: 100%;
+  border-radius: 100px;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: darken($cyan, 6%);
+  }
+}
+
+.ButtonSecondary {
+  color: $white;
+  border: none;
+  background-color: transparent;
+}
