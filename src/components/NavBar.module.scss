@@ -1,0 +1,87 @@
+@import '../styles/main.scss';
+
+.NavBar {
+  padding: 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  cursor: pointer;
+}
+
+.MenuButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.MenuIcon {
+  color: $grayish-violet;
+}
+
+.Menu {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $dark-violet;
+  color: $white;
+  padding: 32px 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.NavList {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-bottom: 1px solid $gray;
+}
+
+.NavItem {
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.Buttons {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Login {
+  font-family: inherit;
+  font-weight: 500;
+  margin: 32px 0;
+  color: $white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.SignUp {
+  background-color: $cyan;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+  color: $white;
+  border: none;
+  width: 100%;
+  border-radius: 100px;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: darken($cyan, 6%);
+  }
+}

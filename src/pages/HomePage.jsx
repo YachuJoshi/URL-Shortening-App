@@ -1,5 +1,11 @@
 import styles from "./HomePage.module.scss";
 
+import { NavBar } from "../components";
+
 export const HomePage = () => {
-  return <div>HELLO WORLD</div>;
+  return (
+    <>
+      <NavBar />
+    </>
+  );
 };
