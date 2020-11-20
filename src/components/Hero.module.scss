@@ -9,6 +9,10 @@
     flex-flow: row;
     margin-top: 50px;
   }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+  }
 }
 
 .Details {

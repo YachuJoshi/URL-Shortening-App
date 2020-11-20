@@ -3,6 +3,10 @@
 .NavBar {
   padding: 20px 16px;
 
+  @include media-breakpoint-up(xl) {
+    padding: 20px 0;
+  }
+
   .Container {
     display: flex;
     justify-content: space-between;
