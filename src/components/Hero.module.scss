@@ -1,0 +1,109 @@
+@import '../styles/main.scss';
+
+.Hero {
+  display: flex;
+  flex-flow: column-reverse;
+  padding: 0 16px;
+
+  @include media-breakpoint-up(md) {
+    flex-flow: row;
+    margin-top: 50px;
+  }
+}
+
+.Details {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+    align-items: stretch;
+    flex: 0 1 50%;
+  }
+}
+
+.Heading {
+  color: $very-dark-violet;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 36px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(md) {
+    font-size: 52px;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 56px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-soze: 60px;
+  }
+}
+
+.Text {
+  font-size: 18px;
+  color: $grayish-violet;
+  font-weight: 500;
+  margin: 20px 0;
+  line-height: 1.6;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 10px;
+    width: 80%;
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 90%;
+  }
+}
+
+.Button {
+  font-size: 18px;
+  padding: 16px 42px;
+
+  @include media-breakpoint-up(md) {
+    align-self: flex-start;
+  }
+}
+
+.BrandingFigure {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+
+  @include media-breakpoint-up(sm) {
+    height: 360px;
+    width: calc(1.5 * 360px);
+    margin: 0 auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 1;
+    margin: 0;
+    height: 300px;
+    width: 400px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 360px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 380px;
+  }
+}
+
+.BrandingImage {
+  height: 100%;
+  width: 100%;
+}

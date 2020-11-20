@@ -17,7 +17,7 @@ export const NavBar = () => {
   return (
     <header>
       <nav className={styles.NavBar}>
-        <Container className={styles.Container}>
+        <div className={styles.Container}>
           <Image
             src="/images/logo.svg"
             alt="Logo"
@@ -67,7 +67,7 @@ export const NavBar = () => {
               Sign Up
             </Button>
           </div>
-        </Container>
+        </div>
       </nav>
     </header>
   );
