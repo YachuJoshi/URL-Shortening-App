@@ -5,6 +5,7 @@ import styles from "./ShortenURLForm.module.scss";
 
 import { Button } from "../ui-kits";
 import { getShortURL } from "../services";
+import { useShortURLs } from "../context";
 
 const expression = /(https?:\/\/)?([\w\-])+\.{1}([a-zA-Z]{2,63})([\/\w-]*)*\/?\??([^#\n\r]*)?#?([^\n\r]*)/g;
 const regex = new RegExp(expression);
@@ -16,7 +17,7 @@ export const ShortenURLForm = () => {
     status: false,
     message: "",
   });
-  const [shortedURLs, setShortedURLs] = useState([]);
+  const { shortedURLs, setShortedURLs } = useShortURLs();
 
   useEffect(() => {
     if (URL) {
@@ -60,11 +61,13 @@ export const ShortenURLForm = () => {
     <div className={styles.Wrapper}>
       <div className={styles.ShortenURLSection}>
         <figure className={styles.BackgroundFigure}>
-          <img
-            src="/images/bg-shorten-mobile.svg"
-            alt="Bg-Design"
-            className={styles.BackgroundDesign}
-          />
+          <picture>
+            <source
+              media="(min-width:1140px)"
+              srcSet="/images/bg-shorten-desktop.svg"
+            />
+            <img src="/images/bg-shorten-mobile.svg" alt="Bg-Design" />
+          </picture>
         </figure>
         <form className={styles.URLForm} onSubmit={(e) => onSubmit(e)}>
           <input
@@ -78,7 +81,12 @@ export const ShortenURLForm = () => {
             onChange={(event) => setURL(event.target.value)}
           />
           {error.status && <p className={styles.Error}>{error.message}</p>}
-          <Button type="submit" kind="primary" className={styles.ButtonSubmit}>
+          <Button
+            type="submit"
+            kind="primary"
+            disabled={loading}
+            className={styles.ButtonSubmit}
+          >
             Shorten It!
           </Button>
         </form>

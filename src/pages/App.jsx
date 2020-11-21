@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { ShortURLsProvider } from "../context";
 
 export function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,9 @@ export function MyApp({ Component, pageProps }) {
         />
         <title>Create Next App</title>
       </Head>
-      <Component {...pageProps} />
+      <ShortURLsProvider>
+        <Component {...pageProps} />
+      </ShortURLsProvider>
     </>
   );
 }
