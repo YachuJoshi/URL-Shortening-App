@@ -4,6 +4,11 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
+
+  &.ButtonPrimary:disabled {
+    background-color: $grayish-violet;
+    cursor: not-allowed;
+  }
 }
 
 .ButtonPrimary {

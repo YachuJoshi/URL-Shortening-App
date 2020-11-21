@@ -4,16 +4,19 @@ import cx from "classnames";
 import styles from "./ShortenURLForm.module.scss";
 
 import { Button } from "../ui-kits";
+import { getShortURL } from "../services";
 
 const expression = /(https?:\/\/)?([\w\-])+\.{1}([a-zA-Z]{2,63})([\/\w-]*)*\/?\??([^#\n\r]*)?#?([^\n\r]*)/g;
 const regex = new RegExp(expression);
 
 export const ShortenURLForm = () => {
   const [URL, setURL] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState({
     status: false,
     message: "",
   });
+  const [shortedURLs, setShortedURLs] = useState([]);
 
   useEffect(() => {
     if (URL) {
@@ -31,10 +34,26 @@ export const ShortenURLForm = () => {
     }
   }, [URL]);
 
-  function onSubmit(e) {
+  useEffect(() => {
+    console.log(shortedURLs);
+  }, [shortedURLs]);
+
+  async function onSubmit(e) {
     e.preventDefault();
     if (!error.status) {
+      setLoading(true);
+      const data = await getShortURL(URL);
+      setLoading(false);
+      const { original_link, full_short_link } = data.result;
+      setShortedURLs((prevURLs) => [
+        ...prevURLs,
+        {
+          URL: original_link,
+          shortURL: full_short_link,
+        },
+      ]);
     }
+    setURL("");
   }
 
   return (

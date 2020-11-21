@@ -1,0 +1,1 @@
+export { getShortURL } from "./ShortUrlApiService";
