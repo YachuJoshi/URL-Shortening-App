@@ -41,10 +41,10 @@ export const NavBar = () => {
                 ))}
               </ul>
               <div className={styles.Buttons}>
-                <Button type="secondary" className={styles.Login}>
+                <Button kind="secondary" className={styles.Login}>
                   Login
                 </Button>
-                <Button type="primary" className={styles.SignUp}>
+                <Button kind="primary" className={styles.SignUp}>
                   Sign Up
                 </Button>
               </div>
@@ -60,10 +60,10 @@ export const NavBar = () => {
             </ul>
           </div>
           <div className={styles.ButtonsDesktop}>
-            <Button type="secondary" className={styles.LoginDesktop}>
+            <Button kind="secondary" className={styles.LoginDesktop}>
               Login
             </Button>
-            <Button type="primary" className={styles.SignUpDesktop}>
+            <Button kind="primary" className={styles.SignUpDesktop}>
               Sign Up
             </Button>
           </div>

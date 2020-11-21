@@ -11,7 +11,7 @@ export const Hero = () => {
           Build your brand’s recognition and get detailed insights on how your
           links are performing.
         </p>
-        <Button type="primary" className={styles.Button}>
+        <Button kind="primary" className={styles.Button}>
           Get Started
         </Button>
       </div>

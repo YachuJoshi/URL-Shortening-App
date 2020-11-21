@@ -1,7 +1,7 @@
 import cx from "classnames";
 import styles from "./Button.module.scss";
 
-const BUTTON_TYPES = {
+const BUTTON_KINDS = {
   primary: "primary",
   secondary: "secondary",
 };
@@ -13,8 +13,8 @@ export const Button = (props) => {
     <button
       {...props}
       className={cx(className, styles.Button, {
-        [styles.ButtonPrimary]: props.type === BUTTON_TYPES.primary,
-        [styles.ButtonSecondary]: props.type === BUTTON_TYPES.secondary,
+        [styles.ButtonPrimary]: props.kind === BUTTON_KINDS.primary,
+        [styles.ButtonSecondary]: props.kind === BUTTON_KINDS.secondary,
       })}
     >
       {props.children}

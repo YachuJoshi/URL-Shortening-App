@@ -1,6 +1,6 @@
 import styles from "./HomePage.module.scss";
 
-import { Hero, NavBar } from "../components";
+import { Hero, NavBar, ShortenURLForm } from "../components";
 import { Container } from "../ui-kits";
 
 export const HomePage = () => {
@@ -8,6 +8,7 @@ export const HomePage = () => {
     <Container>
       <NavBar />
       <Hero />
+      <ShortenURLForm />
     </Container>
   );
 };
