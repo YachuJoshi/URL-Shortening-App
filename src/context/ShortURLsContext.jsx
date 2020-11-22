@@ -5,10 +5,10 @@ const ShortURLsContext = createContext();
 export const useShortURLs = () => useContext(ShortURLsContext);
 
 export const ShortURLsProvider = ({ children }) => {
-  const [shortedURLs, setShortedURLs] = useState([]);
+  const [shortURLs, setShortURLs] = useState([]);
 
   return (
-    <ShortURLsContext.Provider value={{ shortedURLs, setShortedURLs }}>
+    <ShortURLsContext.Provider value={{ shortURLs, setShortURLs }}>
       {children}
     </ShortURLsContext.Provider>
   );

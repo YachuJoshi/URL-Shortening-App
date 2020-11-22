@@ -6,6 +6,10 @@
 
 .ShortURLOutput {
   padding: 0 16px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0
+  }
 }
 
 .ShortURLList {

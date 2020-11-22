@@ -17,7 +17,7 @@ export const ShortenURLForm = () => {
     status: false,
     message: "",
   });
-  const { shortedURLs, setShortedURLs } = useShortURLs();
+  const { setShortURLs } = useShortURLs();
 
   useEffect(() => {
     if (URL) {
@@ -35,10 +35,6 @@ export const ShortenURLForm = () => {
     }
   }, [URL]);
 
-  useEffect(() => {
-    console.log(shortedURLs);
-  }, [shortedURLs]);
-
   async function onSubmit(e) {
     e.preventDefault();
     if (!error.status) {
@@ -46,7 +42,7 @@ export const ShortenURLForm = () => {
       const data = await getShortURL(URL);
       setLoading(false);
       const { original_link, full_short_link } = data.result;
-      setShortedURLs((prevURLs) => [
+      setShortURLs((prevURLs) => [
         ...prevURLs,
         {
           URL: original_link,
