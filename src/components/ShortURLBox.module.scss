@@ -55,8 +55,17 @@
 }
 
 .ShortLink {
-  color: $cyan;
-  font-weight: 600;
+
+  a:link,
+  a:visited {
+    color: $cyan;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 
   @include media-breakpoint-up(md) {
     margin-right: 20px;

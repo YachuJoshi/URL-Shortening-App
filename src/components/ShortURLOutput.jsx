@@ -6,21 +6,7 @@ import { ShortURLBox } from "./ShortURLBox";
 import { useShortURLs } from "../context";
 
 export const ShortURLOutput = () => {
-  const { shortURLs, setShortURLs } = useShortURLs();
-
-  useEffect(() => {
-    setShortURLs((prevShortURLs) => {
-      return !prevShortURLs.length
-        ? [
-            ...prevShortURLs,
-            {
-              URL: "https://melodify-music-app.netlify.app/",
-              shortURL: "https://shrtco.de/b62Vi",
-            },
-          ]
-        : null;
-    });
-  }, []);
+  const { shortURLs } = useShortURLs();
 
   return (
     <section className={styles.Wrapper}>
