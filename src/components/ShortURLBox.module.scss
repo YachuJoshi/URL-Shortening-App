@@ -1,0 +1,33 @@
+@import '../styles/main.scss';
+
+.ShortURLBox {
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.OriginalLinkSection {
+  padding: 24px 28px;
+  border-bottom: 2px solid $grayish-white;
+}
+
+.OriginalLink {
+  color: $very-dark-violet;
+  font-weight: 600;
+}
+
+.AfterLinkSection {
+  padding: 24px 28px;
+  display: flex;
+  flex-flow: column;
+}
+
+.ShortLink {
+  color: $cyan;
+  font-weight: 600;
+}
+
+.Button {
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

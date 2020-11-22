@@ -1,1 +1,10 @@
 @import '../styles/main.scss';
+
+.ShortURLOutput {
+  position: relative;
+  z-index: 1;
+  background-color: $grayish-white;
+  transform: translateY(-151px);
+  min-height: 300px;
+  padding-bottom: 152px;
+}
