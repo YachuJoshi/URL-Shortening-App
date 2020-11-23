@@ -5,9 +5,20 @@
   z-index: 1;
   background-color: $grayish-white;
   margin-top: -151px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
 
   @include media-breakpoint-up(md) {
     margin-top: -140px;
+  }
+}
+
+.VioletBackgroundContainer {
+  background-color: $dark-violet;
+  background-image: url(../../public/images/bg-boost-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(md) {
+    background-image: url(../../public/images/bg-boost-desktop.svg);
   }
 }

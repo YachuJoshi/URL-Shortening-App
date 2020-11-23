@@ -7,6 +7,7 @@ import {
   ShortURLOutput,
   Statistics,
   Features,
+  BoostLink,
 } from "../components";
 import { Container, Section } from "../ui-kits";
 
@@ -22,6 +23,9 @@ export const HomePage = () => {
         <ShortURLOutput />
         <Statistics />
         <Features />
+      </Section>
+      <Section sectionClassName={styles.VioletBackgroundContainer}>
+        <BoostLink />
       </Section>
     </>
   );
