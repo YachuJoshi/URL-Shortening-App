@@ -8,6 +8,7 @@ import {
   Statistics,
   Features,
   BoostLink,
+  Footer,
 } from "../components";
 import { Container, Section } from "../ui-kits";
 
@@ -26,6 +27,9 @@ export const HomePage = () => {
       </Section>
       <Section sectionClassName={styles.VioletBackgroundContainer}>
         <BoostLink />
+      </Section>
+      <Section sectionClassName={styles.FooterContainer}>
+        <Footer />
       </Section>
     </>
   );

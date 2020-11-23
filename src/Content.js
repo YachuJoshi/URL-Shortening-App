@@ -18,3 +18,25 @@ export const FEATURES_LIST = [
     links, supercharging audience engagement.`,
   },
 ];
+
+export const LINKS = [
+  {
+    heading: "Features",
+    list: ["Link Shortening", "Branded Links", "Analytics"],
+  },
+  {
+    heading: "Resources",
+    list: ["Blog", "Developers", "Support"],
+  },
+  {
+    heading: "Company",
+    list: ["About", "Out Team", "Careers", "Contact"],
+  },
+];
+
+export const SOCIAL_ICONS = [
+  "/images/icon-facebook.svg",
+  "/images/icon-twitter.svg",
+  "/images/icon-pinterest.svg",
+  "/images/icon-instagram.svg",
+];

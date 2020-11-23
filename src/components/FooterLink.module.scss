@@ -1,0 +1,38 @@
+@import '../styles/main.scss';
+
+.Links {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+
+  @include media-breakpoint-up(md) {
+    align-items: start;
+    text-align: left;
+    margin: 0;
+  }
+
+  .LinkHeading {
+    color: $white;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .LinksList {
+    li {
+      color: $gray;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $cyan;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '../styles/main.scss';
+
+.Footer {
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    flex-flow: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+
+svg.Logo {
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+
+.Social {
+  align-self: stretch;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+  }
+
+  .SocialList {
+    display: flex;
+    justify-content: center;
+
+    li {
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.12);
+      }
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+  }
+}
