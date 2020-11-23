@@ -26,10 +26,18 @@
 .OriginalLink {
   color: $very-dark-violet;
   font-weight: 600;
-  width: 310px;
+  width: 280px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @include media-breakpoint-up(sm) {
+    width: 450px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 300px;
+  }
 
   @include media-breakpoint-up(lg) {
     width: 400px;
