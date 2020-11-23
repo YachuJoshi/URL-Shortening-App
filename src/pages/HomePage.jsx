@@ -6,6 +6,7 @@ import {
   ShortenURLForm,
   ShortURLOutput,
   Statistics,
+  Features,
 } from "../components";
 import { Container, Section } from "../ui-kits";
 
@@ -20,6 +21,7 @@ export const HomePage = () => {
       <Section sectionClassName={styles.GrayBackgroundContainer}>
         <ShortURLOutput />
         <Statistics />
+        <Features />
       </Section>
     </>
   );

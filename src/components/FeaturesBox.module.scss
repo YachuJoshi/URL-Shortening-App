@@ -1,0 +1,58 @@
+@import '../styles/main.scss';
+
+.FeaturesBox {
+  background-color: $white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 32px 42px;
+  border-radius: 10px;
+
+  @include media-breakpoint-up(xl) {
+    align-items: flex-start;
+  }
+}
+
+.Figure {
+  background-color: $dark-violet;
+  height: 40px;
+  width: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-40px);
+
+  .Logo {
+    transform: translateY(-2px);
+  }
+}
+
+.Details {
+  margin-top: -4px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up(xl) {
+    align-items: flex-start;
+    text-align: left;
+    margin-top: -10px;
+  }
+
+  .Title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .Description {
+    color: $grayish-violet;
+    font-weight: 500;
+    line-height: 1.7;
+    font-size: 18px;
+  }
+}

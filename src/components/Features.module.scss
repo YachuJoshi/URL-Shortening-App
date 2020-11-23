@@ -1,0 +1,65 @@
+@import '../styles/main.scss';
+
+.Features {
+  padding: 0 16px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+    margin-top: 100px;
+  }
+}
+
+.FeaturesList {
+  display: flex;
+  flex-flow: column;
+
+  @include media-breakpoint-up(xl) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+  }
+}
+
+.FeaturesItem {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+
+    @include media-breakpoint-up(xl) {
+      position: relative;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 80px;
+      width: 10px;
+      background-color: $cyan;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media-breakpoint-up(xl) {
+        display: block;
+        left: auto;
+        top: 50%;
+        right: -60px;
+        transform: translate(0, -50%);
+        height: 10px;
+        width: 60px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    @include media-breakpoint-up(xl) {
+      margin-top: 60px;
+    }
+  }
+
+  &:nth-child(3) {
+    @include media-breakpoint-up(xl) {
+      margin-top: 120px;
+    }
+  }
+}
