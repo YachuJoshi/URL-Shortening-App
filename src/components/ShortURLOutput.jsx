@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import styles from "./ShortURLOutput.module.scss";
 import { ShortURLBox } from "./ShortURLBox";
 

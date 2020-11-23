@@ -1,0 +1,46 @@
+@import '../styles/main.scss';
+
+.Statistics {
+  margin: 180px 0 60px;
+  padding: 0 16px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+  }
+
+  .Heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: $mild-dark-violet;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+
+    @include media-breakpoint-up(md) {
+      font-size: 36px;
+    }
+  }
+
+  .Summary {
+    width: 90%;
+    font-size: 18px;
+    font-weight: 500;
+    color: $grayish-violet;
+    line-height: 1.6;
+
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 60%;
+    }
+  }
+}

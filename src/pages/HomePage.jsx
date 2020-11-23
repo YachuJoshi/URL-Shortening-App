@@ -1,6 +1,12 @@
 import styles from "./HomePage.module.scss";
 
-import { Hero, NavBar, ShortenURLForm, ShortURLOutput } from "../components";
+import {
+  Hero,
+  NavBar,
+  ShortenURLForm,
+  ShortURLOutput,
+  Statistics,
+} from "../components";
 import { Container, Section } from "../ui-kits";
 
 export const HomePage = () => {
@@ -11,8 +17,9 @@ export const HomePage = () => {
         <Hero />
         <ShortenURLForm />
       </Container>
-      <Section sectionClassName={styles.ShortURLOutput}>
+      <Section sectionClassName={styles.GrayBackgroundContainer}>
         <ShortURLOutput />
+        <Statistics />
       </Section>
     </>
   );
