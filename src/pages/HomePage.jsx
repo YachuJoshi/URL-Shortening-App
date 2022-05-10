@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styles from "./HomePage.module.scss";
 
 import {
@@ -15,6 +16,9 @@ import { Container, Section } from "../ui-kits";
 export const HomePage = () => {
   return (
     <>
+      <Head>
+        <title>Shortly - Shorten Your URL In Just One Click!</title>
+      </Head>
       <Container>
         <NavBar />
         <Hero />
