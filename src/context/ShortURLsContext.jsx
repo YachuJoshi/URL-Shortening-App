@@ -7,8 +7,12 @@ export const useShortURLs = () => useContext(ShortURLsContext);
 export const ShortURLsProvider = ({ children }) => {
   const [shortURLs, setShortURLs] = useState([
     {
-      URL: "https://melodify-music-app.netlify.app/",
-      shortURL: "https://shrtco.de/b62Vi",
+      URL: "https://super-mario-yachujoshi.vercel.app/",
+      shortURL: "https://shrtco.de/DBme1R",
+    },
+    {
+      URL: "https://melodify-react.vercel.app/",
+      shortURL: "https://shrtco.de/EVdF7e",
     },
   ]);
 
